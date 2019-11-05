@@ -1,25 +1,53 @@
 <div class="container">
   <div class="navbar-left">
     <ul>
-      <li><span><img src="assets/img/twitch.jpg" style="width: 45px" height="30px"></span></li>
-      <li><a class="discover">Discover</a></li>
-      <li><a>Browse</a></li>
-      <li><a>Try Prime</a></li>
+      <li>
+        <span
+          ><img src="assets/img/twitch.jpg" style="width: 45px" height="30px"
+        /></span>
+      </li>
+      <li>
+        <a id="discovernone" class="discover">Discover</a
+        ><i
+          class="fab fa-safari discoverclass"
+          style=" padding: 10px; margin-top: 5px; color: white;"
+        ></i>
+      </li>
+      <li>
+        <a id="browsenone">Browse</a
+        ><i
+          class="far fa-window-restore"
+          style="margin-top: 10px; padding: 5px; margin-left: 5px; margin-right: 5px; color: white;"
+        ></i>
+      </li>
+      <li><a id="tryprimenone">Try Prime</a></li>
       <li><i class="fas fa-ellipsis-h threepoint"></i></li>
     </ul>
   </div>
   <div class="navbar-middle">
-    <input type="search" name="" id="" placeholder="Search">
+    <input type="search" name="" id="" placeholder="Search" />
     <button><i class="fas fa-search"></i></button>
   </div>
   <div class="navbar-right">
-    <ul>
-      <li><i class="fas fa-crown" style="color: white; margin-top: 15px; margin-right: 15px;"></i></li>
-      <li><button class="log-in"><b>Log In</b></button></li>
-      <li><button class="sign-up"><b>Sign Up</b></button></li>
-      <li><i class="far fa-user" style="color: white; margin-top: 15px; margin-right: 15px;"></i></li>
-  </ul>
+    <ul style="float: right;">
+      <li>
+        <i
+          class="fas fa-crown"
+          style="color: white; margin-top: 15px; margin-right: 15px;"
+        ></i>
+      </li>
+      <li>
+        <button class="log-in" (click)="openLogin()"><b>Log In</b></button>
+      </li>
+      <li>
+        <button class="sign-up" (click)="openSign()"><b>Sign Up</b></button>
+      </li>
+      <li>
+        <i
+          class="far fa-user"
+          style="color: white; margin-top: 15px; margin-right: 15px;"
+        ></i>
+      </li>
+    </ul>
   </div>
-
 </div>
-

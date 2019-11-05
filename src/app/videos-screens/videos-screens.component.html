@@ -1,0 +1,302 @@
+
+  <div class="top-video-show">
+    <div>
+      <video class="top-video-1" controls="controls" autoplay muted>
+        <source src="../../assets/video/CSGO.mp4" />
+      </video>
+    </div>
+    <div
+      id="margin-yap"
+      class="flex-box"
+      *ngFor="let k of userlist3.slice(3, 4)"
+    >
+      <div class="flex-box-img">
+        <img
+          src="{{ k.photopath }}"
+          style="width: 45px; height: 45px; border-radius: 50%;"
+        />
+        <button class="flex-box-img-button">English</button>
+      </div>
+      <div class="flex-box-right">
+        <p style="color: rgb(161, 86, 231); font-weight: bolder;">
+          {{ k.username }}
+        </p>
+        <p style="color: rgb(161, 86, 231); font-weight: bolder;">
+          {{ k.gamename }}
+        </p>
+        <p style="color: white;">{{ k.stream }} viewers</p>
+      </div>
+      <div class="flex-box-bottom">
+        <p style="overflow: hidden; text-overflow: clip;">
+          Tune in to the most entertaining Counter-Strike tournament in the
+          world. BLAST Pro Series Copenhagen features some of the best CS:GO
+          teams and the biggest stars, who all go head to head in our classic
+          BLAST Pro Series setup. Only one can be crowned champions and lifting
+          the mythical BLAST trophy.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="middle-text">
+      <h3 style="color: white; font-family: Arial, Helvetica, sans-serif;">
+        Recommended live channels
+      </h3>
+    </div>
+
+    <div id="reach" class="middle-div">
+      <section id="removesection" class="cards">
+        <article
+          id="removecard"
+          class="card"
+          *ngFor="let item of userlist.slice(0, 4)"
+        >
+          <div class="img-border-div">
+            <img src="{{ item.videopath }}" class="img-border" />
+          </div>
+          <div style="width: 35px; float: left;  position: relative; padding-top: 10px;">
+            <img
+              src="{{ item.photopath }}"
+              style="width: 35px; height: 35px; border-radius: 50%;"
+            />
+          </div>
+          <div style="float: right; width: 80%;">
+            <div>
+              <h4
+                style="position: relative; top: -15px; font-size: 15px; text-overflow: clip; overflow: hidden; white-space: nowrap;"
+              >
+                {{ item.text }}
+              </h4>
+            </div>
+            <div style="position: relative; top: -35px; font-size: 13px;">
+              <a>{{ item.username }}</a>
+            </div>
+            <div style="position: relative; top: -35px;">
+              <a>{{ item.gamename }}</a>
+            </div>
+          </div>
+        </article>
+        <!-- <article id="part2" class="card2" *ngFor="let items of userlist">
+          <div class="img-border-div">
+            <img src="{{ items.videopath }}" class="img-border" />
+          </div>
+          <div style="width: 4%;  position: absolute;">
+            <img
+              src="{{ items.photopath }}"
+              style="width: 35px; height: 35px; border-radius: 50%;"
+            />
+          </div>
+          <div style="float: right; width: 80%;">
+            <div>
+              <h4
+                style="position: relative; top: -15px; font-size: 15px; text-overflow: clip; overflow: hidden; white-space: nowrap;"
+              >
+                {{ items.text }}
+              </h4>
+            </div>
+            <div style="position: relative; top: -35px; font-size: 13px;">
+              <a>{{ items.username }}</a>
+            </div>
+            <div style="position: relative; top: -35px;">
+              <a>{{ items.gamename }}</a>
+            </div>
+          </div>
+        </article> -->
+
+
+      </section>
+      <div style="display: flex;">
+      <span id="hidden1" class="line-left"></span>
+      <span id="hidden2"
+        ><button class="line-middle" (click)="showmore()">
+          <b style="color: #8A2BE2;">Show more</b
+          ><i class="down-symbol"></i></button
+      ></span>
+      <span id="hidden3" class="line-right"></span>
+    </div>
+      <section id="opensection" class="cards2">
+        <!-- <article id="removecard" class="card" *ngFor="let item of userlist2">
+          <div class="img-border-div">
+            <img src="{{ item.videopath }}" class="img-border" />
+          </div>
+          <div style="width: 4%;  position: absolute;">
+            <img
+              src="{{ item.photopath }}"
+              style="width: 35px; height: 35px; border-radius: 50%;"
+            />
+          </div>
+          <div style="float: right; width: 80%;">
+            <div>
+              <h4
+                style="position: relative; top: -15px; font-size: 15px; text-overflow: clip; overflow: hidden; white-space: nowrap;"
+              >
+                {{ item.text }}
+              </h4>
+            </div>
+            <div style="position: relative; top: -35px; font-size: 13px;">
+              <a>{{ item.username }}</a>
+            </div>
+            <div style="position: relative; top: -35px;">
+              <a>{{ item.gamename }}</a>
+            </div>
+          </div>
+        </article> -->
+        <article id="part2" class="card" *ngFor="let i of userlist2">
+          <div class="img-border-div">
+            <img src="{{ i.videopath }}" class="img-border" />
+          </div>
+          <div style="width: 40px; position: relative;  float: left; padding-top: 10px;">
+            <img
+              src="{{ i.photopath }}"
+              style="width: 35px; height: 35px; border-radius: 50%;"
+            />
+          </div>
+          <div style="float: right; position: relative; width: 80%;">
+            <div>
+              <h4
+                style="position: relative; top: -15px; font-size: 15px; text-overflow: clip; overflow: hidden; white-space: nowrap;"
+              >
+                {{ i.text }}
+              </h4>
+            </div>
+            <div style="position: relative; top: -35px; font-size: 13px;">
+              <a>{{ i.username }}</a>
+            </div>
+            <div style="position: relative; top: -35px;">
+              <a>{{ i.gamename }}</a>
+            </div>
+          </div>
+        </article>
+        <span class="line-after-game-div1"></span>
+        <!-- <span id="hidden1" class="line-left"></span>
+        <span id="hidden2"
+          ><button class="line-middle" (click)=showmore()>
+            <b style="color: #8A2BE2;">Show more</b
+            ><i class="down-symbol"></i></button
+        ></span>
+        <span id="hidden3" class="line-right"></span> -->
+      </section>
+    </div>
+
+    <div class="middle-text">
+      <h3 style="color: white; font-family: Arial, Helvetica, sans-serif;">
+        Recommended <b style="color: #8A2BE2;">categories</b>
+      </h3>
+    </div>
+    <div class="game-div">
+      <div class="game-img" *ngFor="let element of gamelist">
+        <img
+          src="{{ element.photopath }}"
+          style="width: 145px; height: 200px;"
+        />
+        <div>
+          <h5 class="game-name">{{ element.name }}</h5>
+          <p class="game-viewers">{{ element.viewers }}</p>
+          <button class="game-button">
+            <b class="game-button-text">{{ element.type }}</b>
+          </button>
+        </div>
+      </div>
+    </div>
+    <span class="line-after-game-div"></span>
+  </div>
+
+  <div id="login-id" class="log-In2">
+    <div class="log-form">
+      <span class="log-span"
+        ><img src="assets/img/twitch.jpg" class="log-img" /><b
+          class="log-img-text"
+          >Log in to Twitch</b
+        ></span
+      ><br />
+      <button class="log-button1">
+        <b class="log-button-text" style="color: #772ce8; font-weight: bolder;"
+          >Log In</b
+        ></button
+      ><button id="pass-sign" class="log-button1" (click)="passSign()">
+        <b class="log-button-text" style="color: whitesmoke;">Sign Up</b>
+      </button>
+      <br />
+      <span class="log-line-login"></span><span class="log-line"></span>
+      <p class="log-text">Username</p>
+      <input type="text" class="log-input" />
+      <p class="log-text">Password</p>
+      <input type="text" class="log-input" /><br />
+      <a class="log-mini-text">Trouble logging in?</a><br /><br />
+      <button class="log-button2">Log In</button>
+      <span class="log-line-left"></span><span class="log-line-or"> or </span
+      ><span class="log-line-right"></span> <br /><br />
+      <div class="log-facebook">
+        <img src="assets/img/facebook.png" class="log-facebook-img" />
+        <span class="log-facebook-text">Connect with Facebook</span>
+      </div>
+    </div>
+  </div>
+  <div id="close-id" class="close-div2">
+    <button class="close-button1" (click)="closeLog()">X</button>
+  </div>
+
+  <div id="sign-up-id" class="sign-up2">
+    <div class="sign-form">
+      <span class="sign-span">
+        <img src="assets/img/twitch.jpg" class="log-img" />
+        <b class="sign-img-text">Join Twitch today</b>
+      </span>
+      <br />
+      <button class="sign-button1" (click)="passLog()">
+        <b class="sign-button-text" style="color: whitesmoke;"
+          >Log In</b
+        ></button
+      ><button class="sign-button1">
+        <b class="sign-button-text" style="color: #772ce8; font-weight: bolder;"
+          >Sign Up</b
+        >
+      </button>
+      <br />
+      <span class="sign-line2"></span><span class="sign-line"></span
+      ><span class="sign-line-login"></span>
+      <p class="sign-text">Username</p>
+      <input type="text" class="sign-input" />
+      <p class="sign-text">Password</p>
+      <input type="text" class="sign-input" />
+      <p class="sign-text">Date of Birth</p>
+
+      <select name="browser" class="sign-input-date">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+      </select>
+      <input type="text" placeholder="Day" class="sign-input-day-year" />
+      <input type="text" placeholder="Year" class="sign-input-day-year" />
+      <p class="sign-text">Email</p>
+      <input type="text" class="sign-input" />
+      <p class="email-text">
+        By clicking Sign Up, you are indicating that you have read and agree to
+        the
+      </p>
+      <p class="email-text2">Terms of Service and Privacy Policy.</p>
+
+      <button class="sign-button2">Sign Up</button> <br>
+
+      <span class="sign-line-left"></span><span class="sign-line-or"> or </span
+      ><span class="sign-line-right"></span> <br> <br />
+      <div class="sign-facebook">
+        <img src="assets/img/facebook.png" class="sign-facebook-img" />
+        <span class="sign-facebook-text">Connect with Facebook</span>
+      </div>
+    </div>
+  </div>
+  <div id="sign-close-id" class="sign-close-div2">
+    <button class="sign-close-button1" (click)="signCloseLog()">X</button>
+  </div>
+
+

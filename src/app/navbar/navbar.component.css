@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
   background-color: #202020;
 }
 ul {
@@ -22,13 +25,19 @@ ul span img{
 size: 8px;
 }
 
-.discover:hover {
+/* .discover:hover {
+  color: #BA55D3;
+  text-decoration: underline;
+  text-underline-position: under;
+} */
+.discover {
   color: #BA55D3;
   text-decoration: underline;
   text-underline-position: under;
 }
 
-li a {
+
+.navbar-left li a {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   display: block;
@@ -37,35 +46,73 @@ li a {
   text-decoration: none;
   font-size: 14px;
 }
+
+@media screen and (max-width: 750px) {
+  .navbar-left li a {
+    display: none;
+  }
+  .navbar-left li i {
+    display: block;
+  }
+}
+
+@media screen and (min-width:750px) {
+  .navbar-left li i {
+    display: none;
+  }
+}
+
 .navbar-left {
   flex-grow: 1;
 }
 .navbar-middle {
-  flex-grow: 6;
+  flex-grow: 3;
 }
-/* .navbar-right {
-} */
+.navbar-right {
+  flex-grow: 1;
+}
 .navbar-middle input {
   border: none;
   position: inherit;
   margin-top: 8px;
-  width: 60%;
+  margin-left: 60px;
+  width: 50%;
   background-color: #484848;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 10px 10px;
+  color: whitesmoke;
 }
 .navbar-middle input:focus {
   outline-width: 0;
   border: 2px solid purple;
   position: inherit;
   margin-top: 8px;
-  width: 60%;
+  width: 50%;
   background-color: black;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 10px 10px;
+  color: whitesmoke;
 }
+
+
+@media screen and (max-width:850px) {
+  .navbar-middle  input{
+    display: none;
+  }
+  .navbar-middle button {
+    float: right;
+    background-color: #202020;
+    margin-top: 6px;
+    margin-right: 6px;
+  }
+
+  .navbar-middle button i {
+    color: white;
+  }
+}
+
 
 .threepoint {
   color: white;

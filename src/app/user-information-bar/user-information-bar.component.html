@@ -1,0 +1,43 @@
+<div id="mainsidebar" class="bar">
+  <div id="brdv" class="bardiv">
+    <button class="to-right-button" (click)=openNav()>
+      <i class="fas fa-arrow-right" style="color: white;"></i>
+    </button>
+    <button class="camera-button">
+        <i class="fas fa-video" style="color: grey;"></i>
+    </button>
+    <img
+      *ngFor="let item of userlist"
+      src="{{ item.photopath }}"
+      class="imagesizes"
+    /><span class="tooltiptext">Tooltip right</span>
+  </div>
+
+  <div id="opndv" class="opendiv2">
+    <div class="title-arrow">
+      <a class="sidebar-title-text">POPULAR CHANNELS</a
+      ><button class="to-left-button" (click)=closeNav()>
+        <i class="fas fa-arrow-left" style="color: white;"></i>
+      </button>
+    </div>
+    <ul>
+      <li *ngFor="let item of userlist">
+        <img src="{{ item.photopath }}" class="imagesizes2" />
+        <b class="b1" style="font-size: 14px;">{{ item.username }}</b>
+        <b class="b2">{{ item.gamename }}</b>
+        <b class="stream-number"> {{ item.stream }} </b>
+        <span class="dot"></span>
+      </li>
+    </ul>
+
+    <div class="sign-up-card">
+      <h2 class="a1" style="color: white;">
+          Join the <b style="color: #8A2BE2;">Twitch</b> community!
+      </h2>
+<h4 class="a2">
+          Discover the best live <br> streams anywhere.
+</h4>
+      <button class="sign-up"><b>Sign Up</b></button>
+    </div>
+  </div>
+</div>
